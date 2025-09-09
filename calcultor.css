@@ -4,8 +4,8 @@ body.dark-mode {
 
 body.dark-mode .calculator {
     background: #1e1e1e;
-    box-shadow: 10px -10px 20px #1f1e1e,
-        -10px 10px 20px #232121;
+    box-shadow: 10px -10px 20px #141414,
+        -10px 10px 20px #151515;
 }
 
 body.dark-mode #yellow {
@@ -77,11 +77,12 @@ body {
 
 .numbers {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
     height: 80%;
     position: absolute;
     width: 100%;
     bottom: 0;
+    gap: 3px;
 }
 
 #display-value {
