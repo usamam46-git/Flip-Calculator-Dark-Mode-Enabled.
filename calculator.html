@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcultor.css">
+</head>
+
+<body class="dark-mode">
+
+     <div class="rotate-button">
+        <button id="flip-btn">Flip Calculator</button>
+    </div>
+    <div class="toggle">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+   
+    <div class="calculator-container">
+        <div class="calculator-card">
+            <!-- Front side -->
+            <div class="calculator front">
+                <div class="calculator">
+                    <div>
+                        <input type="text" id="display-value" readonly>
+                    </div>
+                    <div class="numbers">
+                        <button class="btn" onclick="addValue('7')">7</button>
+                        <button class="btn" onclick="addValue('8')">8</button>
+                        <button class="btn" onclick="addValue('9')">9</button>
+                        <button class="btn" id="yellow" onclick="addValue('*')">X</button>
+                        <button class="btn" onclick="addValue('4')">4</button>
+                        <button class="btn" onclick="addValue('5')">5</button>
+                        <button class="btn" onclick="addValue('6')">6</button>
+                        <button class="btn" id="yellow" onclick="addValue('-')">-</button>
+                        <button class="btn" onclick="addValue('1')">1</button>
+                        <button class="btn" onclick="addValue('2')">2</button>
+                        <button class="btn" onclick="addValue('3')">3</button>
+                        <button class="btn" id="yellow" onclick="addValue('+')">+</button>
+
+                        <button class="btn" onclick="clearFunction()">C</button>
+
+                        <button class="btn" onclick="addValue('0')">0</button>
+
+                        <button class="btn" onclick="addValue('.')">.</button>
+
+                        <button class="btn" id="yellow" onclick="calculation('')">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator back">
+                <div class="display">
+                    <input type="text" id="bmi-output" readonly placeholder="Your BMI">
+                </div>
+                <div class="bmi-inputs">
+                    <input type="number" id="weight" placeholder="Weight (kg)">
+                    <input type="number" id="height" placeholder="Height (cm)">
+                    <button class="btn" id="bmi-btn">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

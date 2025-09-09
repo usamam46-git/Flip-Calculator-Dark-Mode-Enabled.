@@ -1,0 +1,262 @@
+body.dark-mode {
+    background: black;
+}
+
+body.dark-mode .calculator {
+    background: #1e1e1e;
+    box-shadow: 10px -10px 20px #1f1e1e,
+        -10px 10px 20px #232121;
+}
+
+body.dark-mode #yellow {
+    background-color: #FD970D;
+}
+
+body.dark-mode #display-value {
+    background: #1e1e1e;
+    color: #ffffff;
+    box-shadow: inset 2px 2px 5px #000000,
+        inset -2px -2px 5px #2a2a2a;
+}
+
+body.dark-mode #display-value::placeholder {
+    color: white;
+}
+
+body.dark-mode .btn {
+    background: #2c2c2c;
+    color: #ffffff;
+    box-shadow: 5px -5px 10px #1a1a1a,
+        -5px 5px 10px #212020;
+}
+
+body.dark-mode .btn:active {
+    box-shadow: inset 2px 2px 5px #000000,
+        inset -2px -2px 5px #3a3a3a;
+}
+body.dark-mode #flip-btn {
+    background-color: rgb(68, 66, 66);
+    color: white;
+     box-shadow: 10px -10px 20px #302f2f,
+        -10px 10px 20px #343232;
+}
+body.dark-mode .bmi-inputs input{
+    background-color: rgb(71, 70, 70);
+    color: white;
+}
+body.dark-mode .display input{
+    background-color: #3a3a3a;
+    text-align: center;
+    color: white;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 300px;
+    height: 450px;
+    /* border: 1px solid black; */
+    position: relative;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 10px -10px 20px #e6e6e6,
+        -10px 10px 20px #ffffff;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 80%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#display-value {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    font-size: 1.3em;
+    left: 0;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 10px -10px 20px #e6e6e6,
+        -10px 10px 20px #ffffff;
+}
+
+.btn {
+    border-radius: 19px;
+    background: #ffffff;
+    box-shadow: 10px -10px 20px #e6e6e6,
+        -10px 10px 20px #ffffff;
+    border: none;
+    font-size: 1.3em;
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    border-radius: 5px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 0.1em;
+    border-radius: 0px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+}
+
+input:checked+.slider:before {
+    transform: translateX(2.8em) rotate(360deg);
+}
+
+.toggle {
+    margin: auto;
+}
+
+.calculator-container {
+    perspective: 1000px;
+    /* gives 3D depth */
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+}
+
+.calculator-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.calculator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    /* hides backside when not visible */
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 10px -10px 20px #e6e6e6,
+        -10px 10px 20px #ffffff;
+}
+
+.calculator.back {
+    transform: rotateY(180deg);
+    /* back is rotated */
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+#flip-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: silver;
+     box-shadow: 10px -10px 20px #e6e6e6,
+        -10px 10px 20px #ffffff;
+}
+.rotate-button{
+    height: auto;
+    margin: auto;
+}
+
+.calculator-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.bmi-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    gap: 15px;
+    padding: 20px;
+    border: none;
+}
+
+.bmi-inputs input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    text-align: center;
+    border: none;
+}
+
+#bmi-output {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.bmi-inputs input:focus {
+    border: 1px solid #666;
+}
+
+.bmi-inputs button {
+    width: 80%;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
