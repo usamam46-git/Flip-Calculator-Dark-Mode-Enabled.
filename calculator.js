@@ -36,22 +36,22 @@ const bmiBtn = document.getElementById("bmi-btn");
 const bmiOutput = document.getElementById("bmi-output");
 
 bmiBtn.addEventListener("click", () => {
-    const weight = parseFloat(document.getElementById("weight").value);
-    const heightCm = parseFloat(document.getElementById("height").value);
+const weight = parseFloat(document.getElementById("weight").value);
+const heightCm = parseFloat(document.getElementById("height").value);
 
-    if (!weight || !heightCm) {
+if (!weight || !heightCm) {
         bmiOutput.value = "Enter values!";
         return;
     }
 
-    const heightM = heightCm / 100;
-    const bmi = (weight / (heightM * heightM)).toFixed(1);
+const heightM = heightCm / 100;
+const bmi = (weight / (heightM * heightM)).toFixed(1);
 
-    let category = "";
-    if (bmi < 18.5) category = "Underweight";
-    else if (bmi < 24.9) category = "Normal";
-    else if (bmi < 29.9) category = "Overweight";
-    else category = "Obese";
+let category = "";
+if (bmi < 18.5) category = "Underweight";
+else if (bmi < 24.9) category = "Normal";
+else if (bmi < 29.9) category = "Overweight";
+else category = "Obese";
 
-    bmiOutput.value = `${bmi} (${category})`;
+bmiOutput.value = `${bmi} (${category})`;
 });
