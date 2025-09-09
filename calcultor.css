@@ -248,6 +248,7 @@ input:checked+.slider:before {
     border-radius: 10px;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 .bmi-inputs input:focus {
