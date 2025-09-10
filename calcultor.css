@@ -1,5 +1,5 @@
 body.dark-mode {
-    background: black;
+    background: rgb(42, 42, 42);
 }
 
 body.dark-mode .calculator {
@@ -10,6 +10,10 @@ body.dark-mode .calculator {
 
 body.dark-mode #yellow {
     background-color: #FD970D;
+}
+
+body.dark-mode #silver {
+    background-color: rgb(82, 81, 81);
 }
 
 body.dark-mode #display-value {
@@ -34,17 +38,20 @@ body.dark-mode .btn:active {
     box-shadow: inset 2px 2px 5px #000000,
         inset -2px -2px 5px #3a3a3a;
 }
+
 body.dark-mode #flip-btn {
     background-color: rgb(68, 66, 66);
     color: white;
-     box-shadow: 10px -10px 20px #302f2f,
+    box-shadow: 10px -10px 20px #302f2f,
         -10px 10px 20px #343232;
 }
-body.dark-mode .bmi-inputs input{
+
+body.dark-mode .bmi-inputs input {
     background-color: rgb(71, 70, 70);
     color: white;
 }
-body.dark-mode .display input{
+
+body.dark-mode .display input {
     background-color: #3a3a3a;
     text-align: center;
     color: white;
@@ -62,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgb(241, 237, 237);
 }
 
 .calculator {
@@ -70,14 +78,14 @@ body {
     /* border: 1px solid black; */
     position: relative;
     border-radius: 15px;
-    background: #ffffff;
-    box-shadow: 10px -10px 20px #e6e6e6,
-        -10px 10px 20px #ffffff;
+    background: #e6e5e5;
+    box-shadow: 36px 36px 63px #a3a3a3,
+        -36px -36px 63px #ffffff;
 }
 
 .numbers {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     height: 80%;
     position: absolute;
     width: 100%;
@@ -210,10 +218,11 @@ input:checked+.slider:before {
     border: none;
     border-radius: 10px;
     background-color: silver;
-     box-shadow: 10px -10px 20px #e6e6e6,
+    box-shadow: 10px -10px 20px #e6e6e6,
         -10px 10px 20px #ffffff;
 }
-.rotate-button{
+
+.rotate-button {
     height: auto;
     margin: auto;
 }
